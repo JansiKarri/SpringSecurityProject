@@ -1,0 +1,86 @@
+<body>
+    <div class="container">
+        <form th:action="@{/register}" method="post">
+            <h1>Register</h1>
+            <input type="text" placeholder="Enter Username" name="username">
+            <input type="password" placeholder="Enter Password" name="password">
+            <button type="submit">Register</button>
+        </form>
+        <div class="login-link">
+            <a th:href="@{/login}">Login</a>
+        </div>
+    </div>
+</body>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f3f4f6;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    form {
+        background-color: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        width: 300px;
+    }
+
+    form h1 {
+        margin: 0;
+        font-size: 24px;
+        color: #111827;
+        text-align: center;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+        padding: 10px;
+        font-size: 14px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    button {
+        padding: 10px;
+        background-color: #3b82f6;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #2563eb;
+    }
+
+    .login-link {
+        margin-top: 15px;
+        text-align: center;
+    }
+
+    .login-link a {
+        color: #3b82f6;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .login-link a:hover {
+        text-decoration: underline;
+    }
+</style>
